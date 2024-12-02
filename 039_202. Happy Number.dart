@@ -1,13 +1,13 @@
 class Solution {
   bool isHappy(int n) {
     int curNum = n;
-    List numList = [];
+    Set numList = {};
     while (curNum != 1) {
-      if (numList.contains(sumSquare(curNum))) {
+      if (numList.contains(curNum)) {
         return false;
       }
-      curNum = sumSquare(curNum);
       numList.add(curNum);
+      curNum = sumSquare(curNum);
     }
     return true;
   }
