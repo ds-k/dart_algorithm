@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class Solution {
   int jump(List<int> nums) {
     if (nums.length < 2) return 0; // 점프가 필요 없는 경우
